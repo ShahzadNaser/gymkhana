@@ -1,0 +1,232 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:company_name",
+ "creation": "2023-07-30 08:57:13.971446",
+ "default_view": "List",
+ "description": "Legal Entity / Subsidiary with a separate Chart of Accounts belonging to the Organization.",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "details",
+  "company_name",
+  "abbr",
+  "is_group",
+  "cb0",
+  "parent_company",
+  "tax_id",
+  "date_of_establishment",
+  "company_info",
+  "company_logo",
+  "date_of_incorporation",
+  "address_html",
+  "phone_no",
+  "fax",
+  "email",
+  "website",
+  "column_break1",
+  "company_description",
+  "registration_info",
+  "registration_details",
+  "lft",
+  "rgt",
+  "old_parent"
+ ],
+ "fields": [
+  {
+   "fieldname": "details",
+   "fieldtype": "Section Break",
+   "oldfieldtype": "Section Break"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company",
+   "oldfieldname": "company_name",
+   "oldfieldtype": "Data",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "label": "Abbr",
+   "oldfieldname": "abbr",
+   "oldfieldtype": "Data",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "cb0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "parent_company",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Parent Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "tax_id",
+   "fieldtype": "Data",
+   "label": "Tax ID"
+  },
+  {
+   "fieldname": "date_of_establishment",
+   "fieldtype": "Date",
+   "label": "Date of Establishment"
+  },
+  {
+   "collapsible": 1,
+   "description": "For reference only.",
+   "fieldname": "company_info",
+   "fieldtype": "Section Break",
+   "label": "Company Info"
+  },
+  {
+   "fieldname": "company_logo",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Company Logo"
+  },
+  {
+   "fieldname": "date_of_incorporation",
+   "fieldtype": "Date",
+   "label": "Date of Incorporation"
+  },
+  {
+   "fieldname": "address_html",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Data",
+   "label": "Phone No",
+   "oldfieldname": "phone_no",
+   "oldfieldtype": "Data",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "fax",
+   "fieldtype": "Data",
+   "label": "Fax",
+   "oldfieldname": "fax",
+   "oldfieldtype": "Data",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "oldfieldname": "email",
+   "oldfieldtype": "Data",
+   "options": "Email"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website",
+   "oldfieldname": "website",
+   "oldfieldtype": "Data"
+  },
+  {
+   "fieldname": "column_break1",
+   "fieldtype": "Column Break",
+   "oldfieldtype": "Column Break",
+   "width": "50%"
+  },
+  {
+   "fieldname": "company_description",
+   "fieldtype": "Text Editor",
+   "label": "Company Description"
+  },
+  {
+   "fieldname": "registration_info",
+   "fieldtype": "Section Break",
+   "oldfieldtype": "Section Break",
+   "width": "50%"
+  },
+  {
+   "description": "Company registration numbers for your reference. Tax numbers etc.",
+   "fieldname": "registration_details",
+   "fieldtype": "Code",
+   "label": "Registration Details",
+   "oldfieldname": "registration_details",
+   "oldfieldtype": "Code"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Lft",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Rgt",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "old_parent",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "icon": "fa fa-building",
+ "image_field": "company_logo",
+ "is_tree": 1,
+ "links": [],
+ "modified": "2023-07-30 08:57:13.971446",
+ "modified_by": "Administrator",
+ "module": "Gymkhana",
+ "name": "Company",
+ "naming_rule": "By fieldname",
+ "nsm_parent_field": "parent_company",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "All",
+   "select": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:leave_type_name",
+ "creation": "2023-07-30 09:02:22.412501",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "leave_type_name",
+  "max_leaves_allowed",
+  "column_break_3",
+  "applicable_after",
+  "max_continuous_days_allowed"
+ ],
+ "fields": [
+  {
+   "fieldname": "leave_type_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Leave Type Name",
+   "oldfieldname": "leave_type_name",
+   "oldfieldtype": "Data",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "max_leaves_allowed",
+   "fieldtype": "Int",
+   "label": "Maximum Leave Allocation Allowed"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "applicable_after",
+   "fieldtype": "Int",
+   "label": "Applicable After (Working Days)"
+  },
+  {
+   "fieldname": "max_continuous_days_allowed",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Maximum Consecutive Leaves Allowed",
+   "oldfieldname": "max_days_allowed",
+   "oldfieldtype": "Data"
+  }
+ ],
+ "icon": "fa fa-flag",
+ "links": [],
+ "modified": "2023-07-30 09:02:22.412501",
+ "modified_by": "Administrator",
+ "module": "Gymkhana",
+ "name": "Leave Type",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Employee",
+   "select": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

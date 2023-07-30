@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "creation": "2023-07-30 08:49:04.546376",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company_name",
+  "designation",
+  "salary",
+  "address",
+  "contact",
+  "total_experience"
+ ],
+ "fields": [
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company",
+   "oldfieldname": "company_name",
+   "oldfieldtype": "Data"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Designation",
+   "oldfieldname": "designation",
+   "oldfieldtype": "Data"
+  },
+  {
+   "fieldname": "salary",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Salary",
+   "oldfieldname": "salary",
+   "oldfieldtype": "Currency",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Address",
+   "oldfieldname": "address",
+   "oldfieldtype": "Small Text"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Contact",
+   "oldfieldname": "contact",
+   "oldfieldtype": "Data"
+  },
+  {
+   "fieldname": "total_experience",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Total Experience",
+   "oldfieldname": "total_experience",
+   "oldfieldtype": "Data"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-30 08:49:04.546376",
+ "modified_by": "Administrator",
+ "module": "Gymkhana",
+ "name": "Employee External Work History",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
