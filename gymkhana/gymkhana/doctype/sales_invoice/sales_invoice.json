@@ -94,7 +94,7 @@
   },
   {
    "bold": 1,
-   "fetch_from": "Member.member_name",
+   "fetch_from": "member.member_name",
    "fieldname": "member_name",
    "fieldtype": "Small Text",
    "hide_days": 1,
@@ -380,7 +380,7 @@
  "icon": "fa fa-file-text",
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-30 23:30:46.535106",
+ "modified": "2023-07-31 00:01:03.727773",
  "modified_by": "Administrator",
  "module": "Gymkhana",
  "name": "Sales Invoice",

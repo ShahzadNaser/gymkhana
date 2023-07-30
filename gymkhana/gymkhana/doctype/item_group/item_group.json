@@ -109,7 +109,7 @@
  "is_tree": 1,
  "links": [],
  "max_attachments": 3,
- "modified": "2023-07-30 22:48:00.160690",
+ "modified": "2023-07-30 23:39:10.964378",
  "modified_by": "Administrator",
  "module": "Gymkhana",
  "name": "Item Group",
@@ -118,11 +118,14 @@
  "owner": "Administrator",
  "permissions": [
   {
+   "create": 1,
+   "delete": 1,
    "email": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Sales User"
+   "role": "Sales User",
+   "write": 1
   },
   {
    "email": 1,
@@ -139,13 +142,17 @@
    "role": "Accounts User"
   },
   {
+   "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
+   "read": 1,
    "report": 1,
    "role": "All",
    "select": 1,
-   "share": 1
+   "share": 1,
+   "write": 1
   }
  ],
  "search_fields": "parent_item_group",
