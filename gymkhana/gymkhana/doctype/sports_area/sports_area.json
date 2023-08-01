@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:area",
+ "creation": "2023-08-01 22:44:00.347393",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "area",
+  "building_location",
+  "category",
+  "column_break_2ypwd",
+  "room_status",
+  "booked_till_date",
+  "booking_no",
+  "fare_per_hour"
+ ],
+ "fields": [
+  {
+   "fieldname": "area",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Area",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "building_location",
+   "fieldtype": "Data",
+   "label": "Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Category",
+   "options": "Indoor\nOutdoor"
+  },
+  {
+   "fieldname": "column_break_2ypwd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "room_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nAvailable\nBooked\nOut Of Service",
+   "reqd": 1
+  },
+  {
+   "fieldname": "booked_till_date",
+   "fieldtype": "Date",
+   "label": "Booked Till Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "booking_no",
+   "fieldtype": "Data",
+   "label": "Booking No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fare_per_hour",
+   "fieldtype": "Currency",
+   "label": "Fare Per Hour",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-08-01 22:51:31.440492",
+ "modified_by": "Administrator",
+ "module": "Gymkhana",
+ "name": "Sports Area",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

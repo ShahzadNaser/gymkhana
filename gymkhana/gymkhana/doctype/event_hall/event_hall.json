@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-08-01 23:00:54.413102",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "location",
+  "capacity",
+  "column_break_qfexm",
+  "statuss",
+  "rateper_day",
+  "type"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Capacity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qfexm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "statuss",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Statuss",
+   "options": "Available\nBooked",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rateper_day",
+   "fieldtype": "Currency",
+   "label": "Rate(Per Day)"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Indoor\nOutdoor",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-08-01 23:00:54.413102",
+ "modified_by": "Administrator",
+ "module": "Gymkhana",
+ "name": "Event Hall",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

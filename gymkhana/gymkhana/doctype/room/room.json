@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:room_no",
+ "creation": "2023-07-31 22:38:37.337295",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "room_no",
+  "capacity",
+  "building_location",
+  "room_category",
+  "column_break_2ypwd",
+  "room_status",
+  "booked_till_date",
+  "booking_no",
+  "fare_per_night"
+ ],
+ "fields": [
+  {
+   "fieldname": "room_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Room No",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Select",
+   "label": "Capacity",
+   "options": "\nSingle Bed\nDouble Bed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "building_location",
+   "fieldtype": "Data",
+   "label": "Building Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2ypwd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "room_status",
+   "fieldtype": "Select",
+   "label": "Room Status",
+   "options": "\nAvailable\nBooked\nOut Of Service",
+   "reqd": 1
+  },
+  {
+   "fieldname": "booked_till_date",
+   "fieldtype": "Date",
+   "label": "Booked Till Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "booking_no",
+   "fieldtype": "Data",
+   "label": "Booking No",
+   "read_only": 1
+  },
+  {
+   "default": "Normal",
+   "fieldname": "room_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Room Category",
+   "options": "Normal\nVIP\nVVIP\nDelux"
+  },
+  {
+   "fieldname": "fare_per_night",
+   "fieldtype": "Currency",
+   "label": "Fare Per Night",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-31 22:56:11.471988",
+ "modified_by": "Administrator",
+ "module": "Gymkhana",
+ "name": "Room",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

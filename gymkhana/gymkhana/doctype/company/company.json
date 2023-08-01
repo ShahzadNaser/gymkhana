@@ -14,6 +14,7 @@
   "company_name",
   "abbr",
   "is_group",
+  "default_currency",
   "cb0",
   "parent_company",
   "tax_id",
@@ -190,13 +191,19 @@
    "label": "old_parent",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Currency",
+   "label": "Currency",
+   "options": "Currency"
   }
  ],
  "icon": "fa fa-building",
  "image_field": "company_logo",
  "is_tree": 1,
  "links": [],
- "modified": "2023-07-30 08:57:13.971446",
+ "modified": "2023-08-01 22:32:17.818383",
  "modified_by": "Administrator",
  "module": "Gymkhana",
  "name": "Company",

@@ -2,7 +2,7 @@
  "actions": [],
  "allow_import": 1,
  "autoname": "naming_series:",
- "creation": "2023-07-30 23:18:49.678496",
+ "creation": "2023-07-31 22:45:43.780490",
  "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -11,30 +11,13 @@
   "title",
   "naming_series",
   "member",
-  "member_name",
-  "tax_id",
-  "is_return",
   "currency",
+  "member_name",
   "column_break1",
   "company",
-  "company_tax_id",
+  "from_date",
+  "to_date",
   "posting_date",
-  "posting_time",
-  "due_date",
-  "return_against",
-  "address_and_contact",
-  "customer_address",
-  "address_display",
-  "contact_person",
-  "contact_display",
-  "contact_mobile",
-  "contact_email",
-  "territory",
-  "col_break4",
-  "shipping_address",
-  "company_address_display",
-  "sec_warehouse",
-  "set_warehouse",
   "items_section",
   "items",
   "section_break_30",
@@ -74,7 +57,7 @@
    "no_copy": 1,
    "oldfieldname": "naming_series",
    "oldfieldtype": "Select",
-   "options": "ACC-SINV-.YYYY.-",
+   "options": "BOOK-.YY.-.MM.-",
    "print_hide": 1,
    "reqd": 1,
    "set_only_once": 1
@@ -108,25 +91,6 @@
    "read_only": 1
   },
   {
-   "fieldname": "tax_id",
-   "fieldtype": "Data",
-   "hide_days": 1,
-   "hide_seconds": 1,
-   "label": "Tax Id",
-   "print_hide": 1,
-   "read_only": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "is_return",
-   "fieldtype": "Check",
-   "hide_days": 1,
-   "hide_seconds": 1,
-   "label": "Is Return (Credit Note)",
-   "no_copy": 1,
-   "print_hide": 1
-  },
-  {
    "fieldname": "column_break1",
    "fieldtype": "Column Break",
    "hide_days": 1,
@@ -149,21 +113,26 @@
    "reqd": 1
   },
   {
-   "fetch_from": "company.tax_id",
-   "fieldname": "company_tax_id",
-   "fieldtype": "Data",
-   "label": "Company Tax ID",
-   "read_only": 1
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "reqd": 1
   },
   {
    "bold": 1,
    "default": "Today",
    "fieldname": "posting_date",
-   "fieldtype": "Date",
+   "fieldtype": "Datetime",
    "hide_days": 1,
    "hide_seconds": 1,
    "in_list_view": 1,
-   "label": "Date",
+   "label": "Posting Date",
    "no_copy": 1,
    "oldfieldname": "posting_date",
    "oldfieldtype": "Date",
@@ -171,159 +140,11 @@
    "search_index": 1
   },
   {
-   "fieldname": "posting_time",
-   "fieldtype": "Time",
-   "hide_days": 1,
-   "hide_seconds": 1,
-   "label": "Posting Time",
-   "no_copy": 1,
-   "oldfieldname": "posting_time",
-   "oldfieldtype": "Time",
-   "print_hide": 1
-  },
-  {
-   "fieldname": "due_date",
-   "fieldtype": "Date",
-   "hide_days": 1,
-   "hide_seconds": 1,
-   "label": "Payment Due Date",
-   "no_copy": 1,
-   "oldfieldname": "due_date",
-   "oldfieldtype": "Date"
-  },
-  {
-   "depends_on": "eval:doc.return_against || doc.is_debit_note",
-   "fieldname": "return_against",
-   "fieldtype": "Link",
-   "hide_days": 1,
-   "hide_seconds": 1,
-   "label": "Return Against",
-   "no_copy": 1,
-   "options": "Sales Invoice",
-   "print_hide": 1,
-   "read_only_depends_on": "eval:doc.is_return",
-   "search_index": 1
-  },
-  {
-   "collapsible": 1,
-   "fieldname": "address_and_contact",
-   "fieldtype": "Section Break",
-   "hide_days": 1,
-   "hide_seconds": 1,
-   "label": "Address and Contact"
-  },
-  {
-   "fieldname": "customer_address",
-   "fieldtype": "Link",
-   "hide_days": 1,
-   "hide_seconds": 1,
-   "label": "Member Address",
-   "options": "Address",
-   "print_hide": 1
-  },
-  {
-   "fieldname": "address_display",
-   "fieldtype": "Small Text",
-   "hide_days": 1,
-   "hide_seconds": 1,
-   "label": "Member Address",
-   "read_only": 1
-  },
-  {
-   "fieldname": "contact_person",
-   "fieldtype": "Link",
-   "hide_days": 1,
-   "hide_seconds": 1,
-   "in_global_search": 1,
-   "label": "Contact Person",
-   "options": "Contact",
-   "print_hide": 1
-  },
-  {
-   "fieldname": "contact_display",
-   "fieldtype": "Small Text",
-   "hide_days": 1,
-   "hide_seconds": 1,
-   "label": "Contact",
-   "read_only": 1
-  },
-  {
-   "fieldname": "contact_mobile",
-   "fieldtype": "Small Text",
-   "hidden": 1,
-   "hide_days": 1,
-   "hide_seconds": 1,
-   "label": "Mobile No",
-   "read_only": 1
-  },
-  {
-   "fieldname": "contact_email",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "hide_days": 1,
-   "hide_seconds": 1,
-   "label": "Contact Email",
-   "options": "Email",
-   "print_hide": 1,
-   "read_only": 1
-  },
-  {
-   "fieldname": "territory",
-   "fieldtype": "Link",
-   "hide_days": 1,
-   "hide_seconds": 1,
-   "label": "Territory",
-   "options": "Territory",
-   "print_hide": 1
-  },
-  {
-   "fieldname": "col_break4",
-   "fieldtype": "Column Break",
-   "hide_days": 1,
-   "hide_seconds": 1
-  },
-  {
-   "fieldname": "shipping_address",
-   "fieldtype": "Small Text",
-   "hide_days": 1,
-   "hide_seconds": 1,
-   "label": "Shipping Address",
-   "print_hide": 1,
-   "read_only": 1
-  },
-  {
-   "fieldname": "company_address_display",
-   "fieldtype": "Small Text",
-   "hidden": 1,
-   "hide_days": 1,
-   "hide_seconds": 1,
-   "label": "Company Address",
-   "print_hide": 1,
-   "read_only": 1
-  },
-  {
-   "fieldname": "sec_warehouse",
-   "fieldtype": "Section Break",
-   "hide_days": 1,
-   "hide_seconds": 1,
-   "label": "Warehouse"
-  },
-  {
-   "depends_on": "update_stock",
-   "fieldname": "set_warehouse",
-   "fieldtype": "Link",
-   "hide_days": 1,
-   "hide_seconds": 1,
-   "label": "Source Warehouse",
-   "options": "Warehouse",
-   "print_hide": 1
-  },
-  {
    "fieldname": "items_section",
    "fieldtype": "Section Break",
    "hide_days": 1,
    "hide_seconds": 1,
-   "label": "Items",
+   "label": "Booking Room",
    "oldfieldtype": "Section Break",
    "options": "fa fa-shopping-cart"
   },
@@ -333,10 +154,10 @@
    "fieldtype": "Table",
    "hide_days": 1,
    "hide_seconds": 1,
-   "label": "Items",
+   "label": "Booking Room",
    "oldfieldname": "entries",
    "oldfieldtype": "Table",
-   "options": "Sales Invoice Item",
+   "options": "Booking Room",
    "reqd": 1
   },
   {
@@ -379,9 +200,19 @@
    "read_only": 1
   },
   {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Sales Invoice",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
    "default": "PKR",
    "fieldname": "currency",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Currency",
    "options": "Currency"
   }
@@ -389,10 +220,10 @@
  "icon": "fa fa-file-text",
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-01 22:48:10.305508",
+ "modified": "2023-08-01 22:48:21.738622",
  "modified_by": "Administrator",
  "module": "Gymkhana",
- "name": "Sales Invoice",
+ "name": "Booking",
  "name_case": "Title Case",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
@@ -436,7 +267,7 @@
   }
  ],
  "quick_entry": 1,
- "search_fields": "posting_date, due_date, member_name",
+ "search_fields": "posting_date, member ,member_name",
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
